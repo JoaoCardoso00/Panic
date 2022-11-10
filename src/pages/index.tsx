@@ -1,5 +1,5 @@
-import { InferGetStaticPropsType, type NextPage } from "next";
 import Head from "next/head";
+import { NavBar } from "../components/navBar";
 import { projectsBucket } from "../lib/cosmic";
 
 interface Project {
@@ -17,7 +17,6 @@ interface HomeProps {
 }
 
 const Home = ({ projects }: HomeProps) => {
-  console.log(projects);
   return (
     <>
       <Head>
@@ -28,7 +27,8 @@ const Home = ({ projects }: HomeProps) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="h-screen w-screen bg-bg-gray">
+        <NavBar />
         <h1 className="text-4xl font-bold">We are Panic</h1>
       </main>
     </>
