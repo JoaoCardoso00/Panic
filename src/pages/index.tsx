@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { NavBar } from "../components/navBar";
 import { projectsBucket } from "../lib/cosmic";
+import { Hero } from "../sections/Hero";
 
 interface Project {
   title: string;
@@ -29,7 +30,7 @@ const Home = ({ projects }: HomeProps) => {
       </Head>
       <main className="h-screen w-screen bg-bg-gray">
         <NavBar />
-        <h1 className="text-4xl font-bold">We are Panic</h1>
+        <Hero />
       </main>
     </>
   );
