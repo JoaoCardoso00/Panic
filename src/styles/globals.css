@@ -5,3 +5,37 @@
 body {
   background-color: #202024;
 }
+
+@layer utilities {
+  .light {
+    background: rgba(217, 217, 217, 0);
+    box-shadow: 0px 0px 3371.76px #3d393555, 0px 0px 1926.72px #f1e4d524,
+      0px 0px 1123.92px #f1e4d523, 0px 0px 561.96px #f1e4d500,
+      0px 0px 160.56px #f1e4d513, 0px 0px 80.28px #f1e4d51c;
+  }
+
+  .navHoverAnimation {
+    text-decoration: none;
+    color: #f8f8f8;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+  }
+
+  .navHoverAnimation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #f8f8f8;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in-out;
+  }
+
+  .navHoverAnimation:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}

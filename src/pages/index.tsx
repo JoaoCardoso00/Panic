@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Light } from "../components/Light";
 import { NavBar } from "../components/navBar";
 import { projectsBucket } from "../lib/cosmic";
 import { Companies } from "../sections/Companies";
@@ -30,6 +31,7 @@ const Home = ({ projects }: HomeProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-screen w-screen bg-bg-gray">
+        <Light />
         <NavBar />
         <Hero />
         <Companies />

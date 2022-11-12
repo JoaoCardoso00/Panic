@@ -7,7 +7,7 @@ interface NavLinkProps {
 
 export const NavLink = ({ href, children }: NavLinkProps) => {
   return (
-    <a className="text-xl text-text-white" href={href}>
+    <a className="navHoverAnimation text-xl text-text-white" href={href}>
       {children}
     </a>
   );
